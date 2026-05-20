@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+
+.marquee-animation {
+    animation: marquee 30s linear infinite;
+}
+
+
+@keyframes marquee {
+  from { translate: 0; }
+  to { translate: -100%; }
+}
