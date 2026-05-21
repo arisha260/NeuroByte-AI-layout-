@@ -36,3 +36,33 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
+
+.join-elipse{
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  filter: blur(125px);
+}
+
+.join-elipse_1{
+  position: absolute;
+  top: 0;
+  background-color: #32CAFD;
+}
+
+.join-elipse_2{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #7214FF;
+}
+
+.join-elipse_3{
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #5865F2;
+}

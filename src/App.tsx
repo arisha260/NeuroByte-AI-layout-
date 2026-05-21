@@ -4,6 +4,7 @@ import { Header } from "./components/Header";
 import { Home } from "./components/Home";
 import { HomeBg } from "./components/HomeBg";
 import { Integrations } from "./components/Integrations";
+import { Join } from "./components/Join";
 import { Security } from "./components/Security";
 import { Trusted } from "./components/Trusted";
 
@@ -19,6 +20,7 @@ export default function App() {
       <Integrations />
       <Security />
 
+      <Join />
       <Footer />
     </div>
   )
