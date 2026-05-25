@@ -1,3 +1,4 @@
+import { ClientsSay } from "./components/ClientsSay";
 import { Features } from "./components/Features";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
@@ -20,6 +21,7 @@ export default function App() {
       <Integrations />
       <Security />
 
+      <ClientsSay />
       <Join />
       <Footer />
     </div>

@@ -66,3 +66,11 @@
   transform: translate(-50%, -50%);
   background-color: #5865F2;
 }
+
+.client-card:nth-child(odd) .client-card-bg {
+  background: linear-gradient(to right, #4A044E, #065F46);
+}
+
+.client-card:nth-child(even) .client-card-bg {
+  background: linear-gradient(to right, #4A044E, #0E1330);
+}
