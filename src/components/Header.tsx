@@ -3,7 +3,7 @@
 
 export function Header () {
     return (
-        <header className="w-full pt-7.5 pb-7.5 backdrop-blur-[27px] absolute">
+        <header className="w-full pt-7.5 pb-7.5 backdrop-blur-[27px] absolute z-50">
             <div className="max-w-6xl flex justify-between items-center mx-auto">
                 <div className="text-[25.2px] font-[Rubik] font-bold text-white">NeuroByte AI</div>
                 <div>
