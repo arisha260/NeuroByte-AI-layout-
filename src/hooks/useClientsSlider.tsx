@@ -13,14 +13,19 @@ export function useClientSlider({cardsData, slider}: useClientSliederProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [containerWidth, setContainerWidth] = useState(0)
 
-    const slideWidth = 416;   // 343 card width + 73 gap left-right
+    const CARD_WIDTH = 343;
+    const CARD_OFFSET = 73;
+
+    // 343 card width + 73 gap left-right
+    const SLIDE_STEP = CARD_WIDTH + CARD_OFFSET;
+
     const visibleCards = Math.max(
         1,
-        Math.floor(containerWidth / slideWidth)    // 1224 - cards container width
+        Math.floor((containerWidth + CARD_OFFSET) / SLIDE_STEP)    // 1224 - cards container width
     )
 
     const maxIndex = cardsData?.length - visibleCards;  // for adaptive on difference devices
-    const translateX = -currentIndex * slideWidth;
+    const translateX = -currentIndex * SLIDE_STEP;
 
     const goToSlide = useCallback((index: number) => {
         if (index < 0) index = 0;
@@ -29,29 +34,28 @@ export function useClientSlider({cardsData, slider}: useClientSliederProps) {
     }, [maxIndex,]);
 
     const nextSlide = useCallback(() => {
+        console.log(visibleCards, containerWidth)
         goToSlide(currentIndex + 1);
-    }, [currentIndex, goToSlide]);
+    }, [currentIndex, goToSlide, visibleCards]);
 
     const prevSlide = useCallback(() => {
         goToSlide(currentIndex - 1);
     }, [currentIndex, goToSlide]);
 
 
-    // const updateWidth = useCallback(() => {
-    //     if (slider.current) {
-    //         setContainerWidth(slider.current.clientWidth);
-    //     }
-    // }, [slider]);
+    useEffect(() => {
+        if (!slider.current) return;
 
-    // useEffect(() => {
-    //     updateWidth();
+        const observer = new ResizeObserver((entries) => {
+            const entry = entries[0];
+            console.log(entry)
+            setContainerWidth(entry.contentRect.width);
+        });
 
-    //     window.addEventListener('resize', updateWidth);
+        observer.observe(slider.current);
 
-    //     return () => {
-    //         window.removeEventListener('resize', updateWidth);
-    //     }
-    // }, [updateWidth])
+        return () => observer.disconnect();
+    }, [slider]);
 
     return { nextSlide, prevSlide, translateX, currentIndex, maxIndex }
 }

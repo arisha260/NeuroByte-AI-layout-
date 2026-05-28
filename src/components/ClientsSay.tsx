@@ -20,7 +20,7 @@ export function ClientsSay () {
                     <Text20 text="Rmet facilisi arcu odio urna aenean erat. Pellentesque in vitae lobortis orci tincidunt facilisis. Pulvinar lacus ultricies turpis urna sapien."/>
                 </div>
 
-                <div className="w-full max-w-306 py-15 px-6  overflow-y-hidden scrollbar-none" ref={sliderRef}>
+                <div className="w-full max-w-306 py-15 px-6 overflow-y-hidden scrollbar-none" ref={sliderRef}>
                     <div className="flex items-center gap-18 transition"
                         style={{
                             transform: `translateX(${translateX}px)`,

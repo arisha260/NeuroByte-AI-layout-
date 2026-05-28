@@ -74,3 +74,19 @@
 .client-card:nth-child(even) .client-card-bg {
   background: linear-gradient(to right, #4A044E, #0E1330);
 }
+
+.employers-info{
+  position: relative;
+}
+
+
+.employers-info::after{
+  content: "";
+  position: absolute;
+  width: 7rem;
+  height: 7rem;
+  bottom: -1rem;
+  transform: rotate(45deg);
+  background: #15141D;
+  z-index: -10;
+}

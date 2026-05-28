@@ -6,7 +6,7 @@ type Prop = {
 export function Text20 ({text, className}: Prop) {
 
     return (
-        <div className={`${className} text-[20px] font-normal font-[Manrope] text-white text-center`}>{text}</div>
+        <div className={`text-[20px] font-normal font-[Manrope] text-white text-center ${className} `}>{text}</div>
     )
 
 }
