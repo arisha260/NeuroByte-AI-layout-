@@ -48,7 +48,6 @@ export function useClientSlider({cardsData, slider}: useClientSliederProps) {
 
         const observer = new ResizeObserver((entries) => {
             const entry = entries[0];
-            console.log(entry)
             setContainerWidth(entry.contentRect.width);
         });
 

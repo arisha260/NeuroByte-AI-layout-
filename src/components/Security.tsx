@@ -8,8 +8,8 @@ import { Title48 } from "./ui/Titles/Title-48";
 export function Security () {
     return (
 
-        <section className="relative py-25 section-end-line">
-            <div className="relative flex items-center justify-center gap-35 z-50">
+        <section className="relative pb-10 pt-0 lg:py-25 section-end-line px-4">
+            <div className="relative flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-35 z-50">
 
                 <div>
                     <img src="/security-image.png" alt="integrations section image" />
@@ -26,7 +26,7 @@ export function Security () {
 
             </div>
 
-            <BigPoints className="absolute left-[-1%] top-[50%] translate-y-[-50%] z-0"/>
+            <BigPoints className="absolute left-[-1%] top-[50%] translate-y-[-50%] z-0 opacity-10 lg:opacity-100"/>
         </section>
 
     )

@@ -36,14 +36,14 @@ export function Footer () {
 
     return (
 
-        <footer className="bg-[#1E1C26] py-25 mx-auto">
-            <div className="mx-auto max-w-300 grid grid-cols-6 gap-10">
+        <footer className="bg-[#1E1C26] py-10 mx-auto px-4 lg:py-25">
+            <div className="mx-auto max-w-300 flex flex-col items-start lg:grid grid-cols-6 gap-10">
                 <div className="flex flex-col gap-7 col-span-1">
                     <div className="text-[25.2px] font-[Rubik] font-bold text-white">NeuroByte AI</div>
                     <p className="text-white text-[14px] opacity-[0.65] font-[Raleway]">
                         With lots of unique blocks, you can easily build a page without coding. Build your next landing page.
                     </p>
-                    <ul className="flex items-center gap-4">
+                    <ul className="flex flex-colitems-center gap-4">
                         <li>
                             <svg className="hover:fill-red-600 transition" xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="#7D818D">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M15.3 1.56572C14.7263 1.84407 14.1206 2.01804 13.4831 2.12242C14.1206 1.7049 14.6306 1.04381 14.8538 0.243557C14.2481 0.626289 13.5788 0.904639 12.8456 1.07861C12.2719 0.417526 11.4431 0 10.5506 0C8.82938 0 7.42688 1.53093 7.42688 3.40979C7.42688 3.68814 7.45875 3.9317 7.5225 4.17526C4.94063 4.03608 2.61375 2.67912 1.05188 0.591495C0.796875 1.1134 0.6375 1.6701 0.6375 2.29639C0.6375 3.47938 1.17938 4.5232 2.04 5.14948C1.53 5.11469 1.05187 4.97552 0.605625 4.73196V4.76675C0.605625 6.43686 1.68938 7.82861 3.12375 8.14175C2.86875 8.21134 2.58188 8.24613 2.295 8.24613C2.10375 8.24613 1.88063 8.21134 1.68938 8.17655C2.10375 9.5335 3.25125 10.5425 4.62187 10.5425C3.53813 11.4472 2.19938 12.0039 0.733125 12.0039C0.478125 12.0039 0.223125 12.0039 0 11.9691C1.4025 12.9433 3.02813 13.5 4.81313 13.5C10.5825 13.5 13.7381 8.28093 13.7381 3.75773C13.7381 3.61856 13.7381 3.44459 13.7381 3.30541C14.3438 2.85309 14.8856 2.2616 15.3 1.56572Z" />
@@ -68,7 +68,7 @@ export function Footer () {
                 </div>
 
 
-                <div className="col-start-3 col-span-4 grid grid-cols-4 gap-10">
+                <div className="col-start-3 col-span-4 grid grid-cols-2 gap-10 lg:grid-cols-4">
                     <FooterNavs title="Company"  links={FooterData1}/>
                     <FooterNavs title="Product"  links={FooterData2}/>
                     <FooterNavs title="Services" links={FooterData3}/>

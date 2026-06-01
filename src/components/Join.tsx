@@ -10,7 +10,7 @@ export function Join () {
 
     return (
 
-        <section className="relative pt-10 pb-20">
+        <section className="relative pt-10 pb-20 px-4">
             <div className="relative mx-auto max-w-254 py-17.5 rounded-2xl bg-[#15141D] z-50 overflow-hidden">
 
                 <div className="relative mx-auto py-20 max-w-121 flex flex-col gap-7 items-center z-50">

@@ -7,7 +7,7 @@ import { Icon1, Icon2, Icon3 } from "./icons/FeautersIcons/FeaturesIcons";
 
 export function Features () {
     return (
-        <section className="relative my-29.25">
+        <section className="relative py-10 lg:py-29.25 px-4">
             <div className="relative flex flex-col items-center z-50">
                 <BlueText text="Features"/>
                 <div className="flex items-center flex-col gap-7">
@@ -16,7 +16,7 @@ export function Features () {
                 </div>
 
                 <div className="max-w-317 mt-12.5 mb-7 py-11.75 px-16.25 bg-[#15141D] rounded-2xl">
-                    <div className="flex items-start gap-40">
+                    <div className="flex flex-col lg:flex-row items-start gap-15 lg:gap-40">
                         <FeatureBlock
                             icon={Icon1}
                             title="Cutting-Edge Innovation"
@@ -43,8 +43,8 @@ export function Features () {
                 </div>
             </div>
 
-            <Points80 className="absolute bottom-[5%] left-[15%] z-0"/>
-            <Points80 className="absolute bottom-[-20%] right-[15%] z-0 rotate-90"/>
+            <Points80 className="absolute opacity-30 lg:opacity-100 bottom-[20%] left-0 lg:left-[15%] z-0"/>
+            <Points80 className="absolute opacity-30 lg:opacity-100 bottom-0 lg:bottom-0 right-[15%] z-0 rotate-90"/>
 
         </section>
     )

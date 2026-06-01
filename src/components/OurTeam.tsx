@@ -5,9 +5,12 @@ import { Text20 } from "./ui/Texts/Text20";
 import { Title48 } from "./ui/Titles/Title-48";
 import { teamMembers } from "../data/OurTeamData"
 import { useOurTeam } from "../hooks/useOurTeam";
+import { useRef } from "react";
 
 
 export function OurTeam () {
+
+    const swiperRef = useRef(null);
 
     const {
         activeIndex,
@@ -17,10 +20,10 @@ export function OurTeam () {
         xMap,
         scaleMap,
         zIndexMap,
-    } = useOurTeam()
+    } = useOurTeam({swiperRef})
 
     return (
-        <section className="relative pt-43 pb-35.25">
+        <section className="relative pt-20 pb-10 px-4 lg:pt-43 lg:pb-35.25">
 
             <div className="relative flex flex-col gap-12.5 items-center">
 
@@ -34,7 +37,7 @@ export function OurTeam () {
 
 
                     {/* Card with employers info */}
-                    <div className="employers-info w-full h-66.25 max-w-225 p-7.5 flex flex-col items-center bg-[#15141D] rounded-4xl text-4 text-center z-50">
+                    <div className="employers-info w-full h-full min-h-67.5 max-w-225 p-7.5 flex flex-col items-center bg-[#15141D] rounded-4xl text-4 text-center z-50">
 
                         <div className="text-white max-w-171 font-[Raleway] pb-7.5">
                             {teamMembers[activeIndex].description}
@@ -53,7 +56,7 @@ export function OurTeam () {
 
                     {/* swiper */}
                     <div className="py-4.5 w-full max-w-292">
-                        <div className="relative w-full h-79 flex items-center overflow-hidden transition duration-500 ease-out">
+                        <div className="relative w-full h-79 flex items-center overflow-hidden transition duration-500 ease-out" ref={swiperRef}>
 
                             {teamMembers.map((member, index) => {
                                 const position = getPosition(index)

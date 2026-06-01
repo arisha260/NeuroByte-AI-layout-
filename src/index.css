@@ -1,6 +1,12 @@
 @import "tailwindcss";
 
 
+:root {
+  --big-fz: clamp(2.8125rem, 2.4265rem + 1.7647vw, 3.75rem);
+
+}
+
+
 .marquee-animation {
     animation: marquee 30s linear infinite;
 }
