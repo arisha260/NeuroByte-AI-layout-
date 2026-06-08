@@ -5,8 +5,10 @@ import { useState } from "react";
 export function Header () {
 
     const [burgerStatus, setBurgerStatus] = useState(false);
+
+
     return (
-        <header className="w-full pt-7.5 pb-7.5 px-4 backdrop-blur-[27px] absolute z-50">
+        <header className={`w-full pt-7.5 pb-7.5 px-4 backdrop-blur-[27px] absolute z-50 ${burgerStatus ? "overflow-hidden" : ""}`}>
             <div className="relative max-w-6xl flex items-center justify-between gap-5 mx-auto">
                 <div className="text-[25.2px] font-[Rubik] font-bold text-white order-0">NeuroByte AI</div>
                 <div className={`absolute w-screen h-screen p-10 -top-10 -left-4 ${burgerStatus ? "translate-x-0" : "translate-x-[150%]"} bg-[#1E1C26] md:relative md:w-auto md:h-auto md:top-0 md:left-0 md:bg-transparent md:p-0 md:translate-x-0 mx-auto order-1 z-0 transition`}>
