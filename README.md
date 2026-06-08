@@ -41,7 +41,3 @@
   npm install
   npm run dev
   ```
-
-## Future Improvements
-
-  For some reason, some of my styles disappeared after deployment, but when I checked before pushing to vercel, everything was fine.
